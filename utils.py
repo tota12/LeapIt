@@ -19,14 +19,13 @@ def count_leap_years(start, end):
 
 # validate year
 def validate_year():
-    valid = False
-    while not valid:
+    while True:
         try:
             year = int(input())
             if year <= 1582:
                 print("Year must be greater than 1582 - the first year of Gregorian calendar.")
             else:
-                valid = True
+                break
         except ValueError:
             print("Please enter an integer")
     return year

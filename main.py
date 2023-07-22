@@ -20,12 +20,11 @@ while choice != "4":
         print("Input two years and I'll tell you how many leap years are there between them.")
         print("The start year: ")
         start_year = utils.validate_year()
-        valid = False
-        while not valid:
+        while True:
             print("The end year: ")
             end_year = utils.validate_year()
             if end_year > start_year:
-                valid = True
+                break
             else:
                 print("The end year must be greater than the start year.")
         print("There are ", utils.count_leap_years(start_year, end_year), " leap years between ", start_year, " and ", end_year, ".")
